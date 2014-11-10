@@ -66,3 +66,7 @@ table h2,
 caption, th, td {
 	text-align: right;
 }
+
+pre {
+    max-width: 80%;
+}
