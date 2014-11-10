@@ -13,6 +13,12 @@
     <h1>Configuring Hidden Services for <a href="<page index>">Tor</a></h1>
     <hr>
 
+    <p>
+    This page describes the steps for setting up your own hidden service. For the technical details of how the hidden service protocol
+    works, see our <a href="<page docs/hidden-services>">hidden service
+    protocol</a> page.
+    </p>
+
     <p>Tor allows clients and relays to offer hidden services. That is,
     you can offer a web server, SSH server, etc., without revealing your
     IP address to its users. In fact, because you don't use any public address,
@@ -20,15 +26,7 @@
     </p>
 
     <p>If you have Tor installed, you can see hidden services in action
-    by visiting this <a href="http://duskgytldkxiuqc6.onion/">sample
-    site</a>.
-    </p>
-
-    <p>
-    This page describes the steps for setting up your own hidden service
-    website. For the technical details of how the hidden service protocol
-    works, see our <a href="<page docs/hidden-services>">hidden service
-    protocol</a> page.
+    by visiting <a href="http://duskgytldkxiuqc6.onion/">DuckDuckGo's</a> search engine hidden service.
     </p>
 
     <hr>
@@ -167,9 +165,9 @@
     OS X, Debian, or Red Hat, then you may need to become root to be able
     to view these files.</p>
 
-    <p>Now that you've restarted Tor, it is busy picking introduction points
-    in the Tor network, and generating a <em>hidden service
-    descriptor</em>. This is a signed list of introduction points along with
+    <p>Now that you've restarted Tor, it will select introduction points
+    in the Tor network, and generate a <em>hidden service
+    descriptor</em> automatically. This is a signed list of introduction points along with
     the service's full public key. It anonymously publishes this descriptor
     to the directory servers, and other people anonymously fetch it from the
     directory servers when they're trying to access your service.
