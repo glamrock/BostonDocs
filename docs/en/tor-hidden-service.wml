@@ -217,6 +217,7 @@
     <li>It is generally a better idea to host hidden services on a Tor client 
     rather than a Tor relay, since relay uptime and other properties are
     publicly visible.</li>
+
     <!-- increased risks over time -->
     </ul>
 
