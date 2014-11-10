@@ -102,16 +102,16 @@
     This section of the file consists of groups of lines, each representing
     one hidden service. Right now they are all commented out (the lines
     start with #), so hidden services are disabled. Each group of lines
-    consists of one <var>HiddenServiceDir</var> line, and one or more
-    <var>HiddenServicePort</var> lines:</p>
+    consists of one <em>HiddenServiceDir</em> line, and one or more
+    <em>HiddenServicePort</em> lines:</p>
     <ul>
-    <li><var>HiddenServiceDir</var> is a directory where Tor will store information
+    <li><em>HiddenServiceDir</em> is a directory where Tor will store information
     about that hidden service.  In particular, Tor will create a file here named
-    <var>hostname</var> which will tell you the onion URL.  You don't need to
+    <em>hostname</em> which will tell you the onion URL.  You don't need to
     add any files to this directory. Make sure this is not the same directory
     as the hidserv directory you created when setting up thttpd, as your
     HiddenServiceDir contains secret information!</li>
-    <li><var>HiddenServicePort</var> lets you specify a virtual port (that is, what
+    <li><em>HiddenServicePort</em> lets you specify a virtual port (that is, what
     port people accessing the hidden service will think they're using) and an
     IP address and port for redirecting connections to this virtual port.</li>
     </ul>
@@ -124,7 +124,7 @@
     HiddenServicePort 80 127.0.0.1:8080
     </pre>
 
-    <p>You're going to want to change the <var>HiddenServiceDir</var> line, so it points
+    <p>You're going to want to change the <em>HiddenServiceDir</em> line, so it points
     to an actual directory that is readable/writeable by the user that will
     be running Tor. The above line should work if you're using the OS X Tor
     package. On Unix, try "/home/username/hidden_service/" and fill in your own
@@ -144,16 +144,16 @@
     log file.)
     </p>
 
-    <p>When Tor starts, it will automatically create the <var>HiddenServiceDir</var>
-    that you specified (if necessary), and it will create two files there.</p>
+    <p>When Tor starts, it will automatically create the <em>HiddenServiceDir</em>
+    that you specified (if necessary), and it will create two files there:</p>
 
     <dl>
-    <dt><var>private_key</var></dt>
+    <dt><em>private_key</em></dt>
     <dd>First, Tor will generate a new public/private keypair for your hidden
     service. It is written into a file called "private_key". Don't share this key
     with others -- if you do they will be able to impersonate your hidden
     service.</dd>
-    <dt><var>hostname</var></dt>
+    <dt><em>hostname</em></dt>
     <dd>The other file Tor will create is called "hostname". This contains
     a short summary of your public key -- it will look something like
     <tt>duskgytldkxiuqc6.onion</tt>. This is the public name for your service,
@@ -185,15 +185,15 @@
     <br>
 
     <p>If you plan to keep your service available for a long time, you might
-    want to make a backup copy of the <var>private_key</var> file somewhere.
+    want to make a backup copy of the <em>private_key</em> file somewhere.
     </p>
 
     <p>If you want to forward multiple virtual ports for a single hidden
-    service, just add more <var>HiddenServicePort</var> lines.
+    service, just add more <em>HiddenServicePort</em> lines.
     If you want to run multiple hidden services from the same Tor
-    client, just add another <var>HiddenServiceDir</var> line. All the following
-    <var>HiddenServicePort</var> lines refer to this <var>HiddenServiceDir</var> line, until
-    you add another <var>HiddenServiceDir</var> line:
+    client, just add another <em>HiddenServiceDir</em> line. All the following
+    <em>HiddenServicePort</em> lines refer to this <em>HiddenServiceDir</em> line, until
+    you add another <em>HiddenServiceDir</em> line:
     </p>
 
     <pre>
